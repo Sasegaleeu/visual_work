@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_Loop5.html</title>
+</head>
+<body>
+    <h1>배열의 함수를 활용해서 반복작업 수행하기</h1>
+    <p>p1</p>
+    <p>p2</p>
+    <p>p3</p>
+    <p>p4</p>
+    <p>p5</p>
+    <button onclick="print()">출력하기</button>
+    <button onclick="print2()">돌아가기</button>
+    <script>
+        // let nums = [10, 20, 30, 40, 50 ,60];
+        // let print = function(){
+        //     let i = nums.length 
+        //     p.forEach(nums[i++]) 
+        // }
+
+        let nums = [10, 20, 30, 40, 50, 60];
+
+
+        let print = function () {
+			let i = document.querySelectorAll('p');
+			i.forEach((p, index) => {
+				    p.innerText = nums[index];
+			});
+		}
+
+        let print2 = function () {
+			let i2 = document.querySelectorAll('p');
+			i2.forEach((p, index) => {
+				p.innerText = 'p' + (index +1);
+			});
+		}
+    
+
+    //     ------------------정답-------------------------
+    //     let print = function (){
+    //         num.forEach(function (item,index){
+    //             document.querySelectorAll("p")[index].innerText
+    //     })
+    // }
+
+     
+        
+        // nums.forEach(function (item,index) {
+        //     console.log (index + " : " + item)
+        //  });
+
+        
+
+            // forEach(function(item, index)){
+
+            // };
+
+            // function forEach(f){
+            //     f(10,0);
+            //     f(20,1);
+            //     f(30,2);
+            //     f(40,3);
+            //     f(50,4);
+            // }l
+
+
+
+
+    </script>
+</body>
+</html>

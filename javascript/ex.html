@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>새창 열기</title>
+</head>
+
+<body>
+    <div>
+        <p>처음 페이지</p>
+    </div>
+    <div>
+        <button onclick="newTabClick()">새창 열기</button>
+        <button onclick="closeTabClick()">새창 닫기</button>
+    </div>
+    <script>
+        function newTabClick() {
+            window.open('new-tab.html', '_blank');
+        }
+
+        function closeTabClick() {
+            window.close();
+        }
+        let printMsg
+    </script>
+</body>
+
+</html>

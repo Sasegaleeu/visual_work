@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_example4.html</title>
+</head>
+<body>
+    <h1>다중 if 문 테스트</h1>
+    <input type="text" id = "jumsu" placeholder="점수 입력..." >
+    <button id="myBtn" onclick= "check()"> 확인하기 </button>
+    <p>
+        <strong id = "result"></strong>학점 입니다.
+    </p>
+    <script>
+        /* 
+            input 요소에 점수를 입력하고 확인하기 버튼을 눌렀을때 점수가
+            90 점 이상이면 "A"
+            80 점 이상이면 "B"
+            70 점 이상이면 "C"
+            60 점 이상이면 "D"
+            그 외의 경우에는 "F" 라는 문자열을 
+            id 가 result 인 곳의 innerText 로 출력해 보세요
+        */
+
+        // 엔터키 동작
+        let input = document.getElementById("jumsu");
+            input.addEventListener("keyup", function (event) {
+            if (event.keyCode === 13) {
+                event.preventDefault();
+                document.getElementById("myBtn").click();
+            }
+            });
+
+
+        let check = function (){    
+            //입력한 점수 읽어오기
+            let grade = document.querySelector("#jumsu").value;
+            if (grade > 100){
+                document.querySelector("#result").innerText= "error";
+            }else if (grade >= 90){
+                document.querySelector("#result").innerText= "A";
+            }else if (grade >= 80){
+                document.querySelector("#result").innerText= "B";
+            }else if (grade >= 70){
+                document.querySelector("#result").innerText= "C";
+            }else if (grade >= 60){
+                document.querySelector("#result").innerText= "D";
+            // 마지막 else 가 없으면, 수행되는 부분이 하나도 없을 수도 있다. -> else 는 default 수행
+            }else {
+                document.querySelector("#result").innerText= "F";
+            }
+        }
+        // 삼항 연산자를 통한 학점 
+
+        // function check() {
+        //     let grade = Number (document.querySelector("#jumsu").value);
+        //     let result = grade >= 90 ? "A" : grade >= 80 ? "B" : grade >= 70 ? "C" : grade >= 60 ? "D" : "F";
+        //     document.querySelector("#result").innerText = result;
+        // }
+
+
+    </script>
+</body>
+</html>
