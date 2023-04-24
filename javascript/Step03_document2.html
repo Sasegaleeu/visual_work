@@ -14,7 +14,6 @@
                 height: 100px;
                 background-color: yellow;
                 cursor: pointer;
-                transition: margin-left 0.4s ease-in-out;
                 
         }
 
@@ -27,18 +26,38 @@
           doloribus explicabo illo sequi id vitae magnam, vel ipsa.</p>
 
               
-    <div class = "box" onclick ="move()" oneclick = "move2()"> box </p>
+    <div class = "box" onclick ="move()" onclick = "move2()"> box </p>
         
     
 <script>
 
+    // let move = function() {
+    //         document.querySelector(".box").style.marginLeft="100px";
+    //     };
+    
+    // // let move2 = function() {
+    // //         document.querySelector(".box").style.marginRight="100px";
+    // //     };    
+    // let move2 = function() {
+    //     document.querySelector(".box").style.margin = "0";  
+    //     document.querySelector(".box").style.marginLeft = "0";
+    // };
+
+
     let move = function() {
-            document.querySelector(".box").style.marginLeft="100px";
-        };
+        document.querySelector(".box").style.marginLeft = "100px";
+    };
     
     let move2 = function() {
-            document.querySelector(".box").style.marginRight="100px";
-        };    
+        document.querySelector(".box").style.transform = "translateX(0)";
+    };  
+    
+    document.querySelector(".box").addEventListener("click", function() {
+    document.querySelector(".box").style.transform = "translateX(0)";
+    });
+
+
+    
 
         /* 
 

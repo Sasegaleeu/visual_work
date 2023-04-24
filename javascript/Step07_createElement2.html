@@ -7,16 +7,23 @@
     <title>문서 객체를 javascript로 만들기</title>
 </head>
 <body>
+    <h1>문서 객체를 javascript로 만들기</h1>
     <div class="wrapper">
         <p></p>
+        <Button id = "addBtn">추가하기</Button>
     </div>
     <script>
         // p 요소를 만들어서 참조값을 p1 이라는 변수에 담기
-        let p1 = document.createElement("p");
+   
+
+        document.querySelector("#addBtn").addEventListener("click", (event)=> {
+            let p1 = document.createElement("p");
         // 위에서 만든 p 요소에 innerText를 추가하기
-        p1.innerText = "p1입니다.";
+            p1.innerText = "p1입니다.";
         // wrapper에 p1 추가하기
-        document.querySelector(".wrapper").append(p1);
+            document.querySelector(".wrapper").append(p1);
+        })
+
     </script>
 </body>
 </html>
